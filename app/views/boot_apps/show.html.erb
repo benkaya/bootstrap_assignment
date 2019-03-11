@@ -1,0 +1,11 @@
+<h1>Show details of this blog</h1>
+<div class="function_name">
+<u>Name:</u> <%= @boot_app.name %><br>
+<br>
+<u>E-mail:</u> <%= @boot_app.email %><br>
+<br>
+<u>Content:</u> <%= @boot_app.content %><br>
+<br>
+</div>
+<br>
+<%= link_to 'Return to Blog List', boot_apps_path, class: "btn_new" %>

@@ -1,0 +1,25 @@
+<h1>Create a new blog </h1>
+<%= form_with(model: @boot_app, local: true) do |form| %>
+
+<div class="function_name">
+    <%= form.label :Name %>
+    <%= form.text_field :name %> 
+</div>
+
+<div class="function_name">
+    <%= form.label :Email %>
+    <%= form.text_field :email %> 
+</div>
+
+<div class="function_name">
+    <%= form.label :Content %>
+    <%= form.text_field :content %> 
+</div>
+
+
+<%= form.submit %>
+
+
+
+
+<% end %>

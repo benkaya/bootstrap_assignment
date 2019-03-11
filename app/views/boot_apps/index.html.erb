@@ -1,0 +1,28 @@
+<h1>List of Blogs</h1>
+ <div class="container">
+   <!--<header class="header">Bootstrap</header>  -->
+ <div class="row">
+ <% @boot_apps.each do |boot_app| %>
+ 
+ <div class="col-xs-12 col-sm-6 col-md-4 blog-panel">
+ <h2><u>Name:</u> <%= boot_app.name %></h2>
+ <h3><u>E-mail:</u> <%= boot_app.email %></h3>
+ <h3><u>Content:</u> <%= boot_app.content %></h3>
+ 
+ <div class="x">
+     <%= link_to 'Edit', edit_boot_app_path(boot_app), class: "btn_edit" %>
+     <%= link_to 'Show', boot_app_path(boot_app), class: "btn_show" %>
+     <%= link_to 'Destroy', boot_app, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn_delete" %>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <% end %>
+ <br>
+ 
+ <div id="new-blog-link">
+<%= link_to 'Create a new blog', new_boot_app_path, class: "btn_new" %>
+ </div>
+ </div>
+ 
